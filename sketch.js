@@ -20,7 +20,7 @@ function setup() {
 
 	//Create the Bodies Here.
 
-	crumbledPaper = new Paper(50, 630);
+	crumbledPaper = new Paper(200, 450, 40);
 	dustbinBase = new Dustbin(650, 650, 160, 40);
 	dustbinLeft = new Dustbin(550, 640, 40, 160);
 	dustbinRight = new Dustbin(750, 640, 40, 160);
@@ -54,8 +54,7 @@ function draw() {
 function keyPressed(){
 
 	if(keyCode === UP_ARROW){
-		Body.applyForce(crumbledPaper, crumbledPaper.position, {x:85, y:85});
-	}
+		Body.applyForce(crumbledPaper.body, crumbledPaper.position, {x:800, y:-500});}
 }
 
 
