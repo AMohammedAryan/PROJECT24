@@ -1,16 +1,19 @@
 class Paper{
 
-    constructor(x, y){
+    constructor(x, y, r){
 
         var options ={
             density:1.2,
             friction:0.5,
             restitution:0.3,
-            isStatic:true
+            isStatic:false
         }
 
-        this.body = Bodies.circle(x, y, 70, options);
-        this.diameter = 70;
+        this.x = x;
+        this.y = y;
+        this.r = r;
+
+        this.body = Bodies.circle(x, y, r/2, options);
 
         World.add(world, this.body);
     }
@@ -28,7 +31,7 @@ class Paper{
         ellipseMode(CENTER);
         fill("purple");
         
-        ellipse(0, 0, this.diameter);
+        ellipse(0, 0, this.r, this.r);
 
         pop()
     }
