@@ -54,8 +54,5 @@ function draw() {
 function keyPressed(){
 
 	if(keyCode === UP_ARROW){
-		Body.applyForce(crumbledPaper.body, crumbledPaper.position, {x:800, y:-500});}
+		Body.applyForce(crumbledPaper.body, crumbledPaper.body.position, {x:85, y:-85});}
 }
-
-
-
